@@ -1,24 +1,17 @@
 /* Mobile-first, simple flexbox layout for beginners */
 
-/* Main layout: stack sections vertically using flexbox */
+/* Remove main layout flexbox for body, Bootstrap handles container layout */
 body {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  width: 100vw;
   box-sizing: border-box;
   background: #242222;
 }
 
-/* Header with background image and centered content */
+/* Remove unnecessary width/padding for header, Bootstrap container handles it */
 header {
   color: #fff;
-  padding: 2.5em 1.5em; /* More padding for bigger look */
-  text-align: center;
-  width: 100%;
-  min-height: 75vh; /* Make header a bit taller */
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,6 +20,7 @@ header {
   background: url('img/Nature.jpg') center/cover no-repeat;
   box-sizing: border-box;
   overflow: hidden;
+  /* padding and width removed */
 }
 header::before {
   content: "";
@@ -46,7 +40,7 @@ header > div {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1200px; /* Allow header content to be wider */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2.5em 1.5em;
   box-sizing: border-box;
@@ -55,7 +49,7 @@ header > div {
   gap: 1em;
 }
 header * {
-  font-size: 1.45em; /* Make all header text bigger */
+  font-size: 1.45em;
   margin-bottom: 18px;
   word-break: break-word;
 }
@@ -84,7 +78,7 @@ header p {
 
 /* Responsive Intel logo image */
 body img {
-  width: 18em;        /* Bigger logo */
+  width: 18em;
   max-width: 95vw;
   min-width: 8em;
   margin-bottom: 32px;
@@ -113,7 +107,7 @@ p {
   border-radius: 4px;
 }
 
-/* Timeline section: horizontal scroll with flexbox */
+/* Timeline section: horizontal scroll with flexbox (keep this) */
 section {
   background: linear-gradient(120deg, #76adf9 20%, #2b9738 100%);
   display: flex;
